@@ -1,0 +1,115 @@
+@charset "UTF-8"; /* 맨 위에 작성 -> 모든 스타일 인코딩 */
+@import url(./reset.css);
+
+#wrap {width: 1200px; margin: 0 auto; z-index: 1;}
+#wrap #header {width: 100%; height: 100px; display: flex; position: relative; z-index: 3;}
+
+#wrap #header .left {width: 200px; height: 100px;display: flex;}
+#wrap #header .left h1 {width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+#wrap #header .left h1 a {width: 100%; height: 50px; background-color:rgba(143,188,143,1); display: flex; align-items: center; justify-content: center; transition: all .3s;}
+#wrap #header .left h1 a:hover {background-color:rgba(95,158,160,.75);}
+#wrap #header .left h1 a img {width: 70%;}
+
+#wrap #header .right {width: 1000px; height: 100px; background-color: #fff;}
+#wrap #header .right #nav {background-color:rgba(95,158,160,.75); width: 700px; height: 50px; margin: 25px 20px 25px auto;}
+#wrap #header .right #nav > ul {width: 100%; display: flex;}
+#wrap #header .right #nav > ul > li {width: 25%;}
+#wrap #header .right #nav > ul > li > a {display: flex; width: 100%; height: 50px; justify-content: center; align-items: center;
+    font-size: 18px; font-weight: 600; border: 1px solid rgb(21, 39, 40); color: #fff; transition: all .3s; border-right: 0px;}
+#wrap #header .right #nav > ul > li:last-child > a {border-right: 1px solid rgb(21, 39, 40);}
+#wrap #header .right #nav > ul > li > a:hover {background-color:rgb(95,158,160,1); color: #fff;}
+#wrap #header .right #nav > ul > li > a.on {background-color:rgb(95,158,160,1); color: #fff;}
+
+#wrap #header .right #nav > ul > li > .sub {display: none; width: 100%; background: #fff;}
+#wrap #header .right #nav > ul > li > .sub.on {display: block; width: 100%; background: #fff;}
+#wrap #header .right #nav > ul > li > .sub ul {width: 100%; padding: 8px 0;}
+#wrap #header .right #nav > ul > li > .sub ul li {width: 100%;}
+#wrap #header .right #nav > ul > li > .sub ul li a {display: flex; align-items: center; justify-content: center; width: 100%; height: 30px; font-weight: 500; transition: all .3s;}
+#wrap #header .right #nav > ul > li > .sub ul li a:hover {background-color:rgb(95,158,160,1); color: #fff;}
+
+#wrap #main {width: 100%; height: 500px; position: relative; z-index: 2;}
+#wrap #main #section1 {width: 100%;}
+#wrap #main #section1 .s-container {width: 100%;}
+#wrap #main #section1 .s-container .s-view {width: 100%; overflow: hidden;}
+#wrap #main #section1 .s-container .s-view .s-wrap1 {width: 500%; display: flex; margin: 0 0 0 -100%; position: relative; left: calc(-100%*0);}
+#wrap #main #section1 .s-container .s-view .s-wrap1 .slide {width: 100%; position: relative;}
+#wrap #main #section1 .s-container .s-view .s-wrap1 .slide img {width: 100%; position: relative; z-index: 1;}
+#wrap #main #section1 .s-container .s-view .s-wrap1 .slide h2 {font-size: 50px; font-weight: 600; color: #fff; position: absolute; top: 50%; left: 0; z-index: 2; text-align: center; width: 100%; margin-top: -30px 0 0 0; user-select: none;}
+
+#wrap #main #section2 {width: 100%; height: 200px; display: flex; padding: 10px 0 0 0; position:relative; justify-content: space-between;}
+#wrap #main #section2 .left {width: 393.3333333px; height: 100%; position: relative; padding: 40px 0 0 0;}
+#wrap #main #section2 .left button {width: 100px; height: 41px; border: 1px solid rgb(21, 39, 40,.5); border-bottom: 0; border-radius: 5px 5px 0 0; position: absolute; top: 0;}
+
+#wrap #main #section2 .left button.notice-btn {left: 10px; background-color: #fff; z-index: 3;}
+#wrap #main #section2 .left button.notice-btn.on {left: 10px; background-color: rgba(95,158,160,.75); color: #fff; z-index: 1; transition: all .3s;}
+#wrap #main #section2 .left button.notice-btn.on:hover {left: 10px; background-color: rgba(95,158,160,1); color: #fff; z-index: 1;}
+
+#wrap #main #section2 .left button.gallery-btn {left: 110px; background-color: rgba(95,158,160,.75); color: #fff; z-index: 1; transition: all .3s;}
+#wrap #main #section2 .left button.gallery-btn:hover {left: 110px; background-color: rgba(95,158,160,1); color: #fff; z-index: 1;}
+#wrap #main #section2 .left button.gallery-btn.on {left: 110px; background-color: #fff; z-index: 3; color: #000;}
+
+/* 공지사항 */
+#wrap #main #section2 .left .notice {width: 100%; height: 100%; border: 1px solid rgb(21, 39, 40,.5); position: relative; z-index: 2; background-color: #fff;}
+#wrap #main #section2 .left .notice.on {display: none;}
+#wrap #main #section2 .left .notice .gap {padding: 15px;}
+#wrap #main #section2 .left .notice .gap ul {width: 100%;}
+#wrap #main #section2 .left .notice .gap ul li {width: 100%; height: 30px; padding:0 0 0 12px; display: flex; justify-content: space-between; align-items: center; position: relative;}
+#wrap #main #section2 .left .notice .gap ul li:before {content: ''; position: absolute; top: 50%; left: 0; width: 2px; height: 2px; margin: -1px 0 0 0; background: #555; border-radius: 50%}
+#wrap #main #section2 .left .notice .gap ul li a {color: #555; width: 60%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+#wrap #main #section2 .left .notice .gap ul li a:hover {color: rgba(95,158,160,1);}
+#wrap #main #section2 .left .notice .gap ul li span {color: #999; user-select: none;}
+
+/* 갤러리 이미지 */
+#wrap #main #section2 .left .gallery {width: 100%; height: 100%; text-align: center; line-height: 150px; border: 1px solid rgb(21, 39, 40,.5); position: relative; display: none;}
+#wrap #main #section2 .left .gallery .gap {padding: 0 7px;}
+#wrap #main #section2 .left .gallery .gap > ul {display: flex;}
+#wrap #main #section2 .left .gallery .gap > ul > li {width: 33.3333%;}
+#wrap #main #section2 .left .gallery .gap > ul > li .col-gap {margin: 0 7px;}
+#wrap #main #section2 .left .gallery .gap > ul > li .col-gap a {}
+#wrap #main #section2 .left .gallery .gap > ul > li .col-gap a img {width: 100%; transition: all .3s; cursor: pointer;}
+#wrap #main #section2 .left .gallery .gap > ul > li .col-gap a img:hover {opacity: .8;}
+#wrap #main #section2 .left .gallery.on {display: block;}
+
+#wrap #main #section2 .center {width: 393.3333333px; height: 100%;}
+#wrap #main #section2 .center .title {width: 100%; height: 40px; background: rgba(143,188,143,.5); display: flex; align-items: center; justify-content: center;}
+#wrap #main #section2 .center .title h2 {font-size: 14px; font-weight: 500;}
+#wrap #main #section2 .center .banner {width: 100%; border: 1px solid #ddd; height: 150px; display: flex; justify-content: center; align-items: center; overflow: hidden;}
+#wrap #main #section2 .center .banner img {width: 100%;}
+
+#wrap #main #section2 .right {width: 393.3333333px; height: 100%;}
+#wrap #main #section2 .right .title {width: 100%; height: 40px; background: rgba(143,188,143,.5); display: flex; align-items: center; justify-content: center;}
+#wrap #main #section2 .right .title h2 {font-size: 14px; font-weight: 500;}
+#wrap #main #section2 .right .direct {width: 100%; border: 1px solid #ddd; height: 150px; display: flex; justify-content: center; align-items: center; overflow: hidden;}
+#wrap #main #section2 .right .direct img {width: 100%;}
+
+
+#wrap #footer {width: 100%; height: 90px; display: flex; position: relative; z-index: 1; justify-content: space-between; margin: 10px 0 0 0; background-color: #fff;}
+#wrap #footer .left {width: 200px; height: 100%; display: flex; align-items: center;}
+#wrap #footer .left h2 {width: 100%;}
+#wrap #footer .left h2 a {display: flex; width: 100%; height: 40px; align-items: center; justify-content: center;}
+#wrap #footer .left h2 a img {width: 70%;}
+
+#wrap #footer .center {width: 780px; height: 100%;}
+#wrap #footer .center .row1 {width: 100%; height: 50%; display: flex; align-items: center; justify-content: center;}
+#wrap #footer .center .row1 span {font-size: 12px;}
+#wrap #footer .center .row1 span a {color: #999;}
+#wrap #footer .center .row1 span i {margin: 0 10px; color: #999;}
+#wrap #footer .center .row2 {width: 100%; height: 50%; display: flex; align-items: center; justify-content: center;}
+#wrap #footer .center .row2 p {color: #999; font-size: 10px;}
+
+#wrap #footer .right {width: 200px; height: 100%; display: flex; justify-content: space-evenly; align-items: center;}
+#wrap #footer .right span {display: inline-block;}
+#wrap #footer .right span a {display: inline-block;}
+#wrap #footer .right span a img {width: 30px; border-radius: 5px;}
+
+/* 모달창(레이어 팝업) */
+#wrap #modal {width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 4; background: rgba(0, 0, 0, .5);} /* 항상 position: fixed; wrap이랑 modal만 따져서 z-index 사용 (그래서 2번..인데 헤더랑 겹쳐서 걍 4번으로) */
+#wrap #modal .m-wrap {width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;} /* 얘는 정렬만 하는 역할 */
+#wrap #modal .m-wrap .m-container {width: 500px; height: auto; background: #fff;}
+#wrap #modal .m-wrap .m-container .title {width: 100%; height: 60px; border-bottom: 1px solid #ddd; display: flex; align-items: center; background: #f3f3f3;}
+#wrap #modal .m-wrap .m-container .title h2 {font-size: 18px; font-weight: 600; padding: 0 0 0 20px;}
+#wrap #modal .m-wrap .m-container .content {width: 100%;}
+#wrap #modal .m-wrap .m-container .content ul {padding: 15px 20px;}
+#wrap #modal .m-wrap .m-container .content ul li {font-size: 16px; padding: 7px 0; line-height: 160%;}
+#wrap #modal .m-wrap .m-container .button-box {padding: 0 15px 15px 0; text-align: right;}
+#wrap #modal .m-wrap .m-container .button-box .m-close {padding: 5px 20px; cursor: pointer; border: 1px solid #ccc; border-radius: 3px;}
